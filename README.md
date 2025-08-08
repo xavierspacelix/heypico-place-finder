@@ -10,8 +10,8 @@ A production-ready application that integrates a Local Language Model (via Open 
 ## Setup
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd places-finder
+   git clone https://github.com/xavierspacelix/heypico-place-finder.git
+   cd heypico-place-finder
    ```
 
 2. Create a `.env` file in the `backend` directory with the following:
@@ -42,17 +42,11 @@ A production-ready application that integrates a Local Language Model (via Open 
 
 6. Access the application at `http://localhost:3000`.
 
-## Deployment
-- Deploy to a cloud provider (e.g., AWS, GCP) using Docker Compose or Kubernetes.
-- Update `FRONTEND_URL` in `backend/.env` to match the deployed frontend URL.
-- Restrict Google Maps API Key to your domain in Google Cloud Console.
-
 ## Notes
 - The application uses Phi-2 as the default LLM. Replace with `tinyllama` for lower resource usage if needed.
 - Redis is used for caching in production.
 - Rate limiting is enabled to prevent API abuse.
 
 ## Troubleshooting
-- Check Docker logs: `docker-compose logs`
 - Ensure Google Maps API Key is valid and enabled for Places API and Maps JavaScript API.
 - Verify Ollama and Open WebUI are running (`http://localhost:8080` for Open WebUI).
