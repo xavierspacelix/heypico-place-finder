@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Places Finder</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    // Dynamically load Google Maps API with API key from environment
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}&libraries=places&loading=async&callback=initMap`;
+    script.async = true;
+    document.head.appendChild(script);
+  </script>
+</body>
+</html>
